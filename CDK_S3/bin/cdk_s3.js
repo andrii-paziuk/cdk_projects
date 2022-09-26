@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("source-map-support/register");
+const cdk = require("@aws-cdk/core");
+const cdk_vpc_stack_1 = require("../../CDK_VPC/lib/cdk_vpc-stack");
+const s3_stack_1 = require("../lib/s3-stack");
+const app = new cdk.App();
+const vpcStack = new cdk_vpc_stack_1.VpcStack(app, 'VpcStack');
+new s3_stack_1.S3Stack(app, 'S3Stack', { vpc: vpcStack.vpc });
+app.synth();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2RrX3MzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY2RrX3MzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsdUNBQXFDO0FBQ3JDLHFDQUFzQztBQUN0QyxtRUFBeUQ7QUFDekQsOENBQXdDO0FBRXhDLE1BQU0sR0FBRyxHQUFHLElBQUksR0FBRyxDQUFDLEdBQUcsRUFBRSxDQUFDO0FBQzFCLE1BQU0sUUFBUSxHQUFJLElBQUksd0JBQVEsQ0FBQyxHQUFHLEVBQUUsVUFBVSxDQUFDLENBQUM7QUFDaEQsSUFBSSxrQkFBTyxDQUFDLEdBQUcsRUFBRSxTQUFTLEVBQUUsRUFBQyxHQUFHLEVBQUUsUUFBUSxDQUFDLEdBQUcsRUFBQyxDQUFDLENBQUM7QUFDakQsR0FBRyxDQUFDLEtBQUssRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICdzb3VyY2UtbWFwLXN1cHBvcnQvcmVnaXN0ZXInO1xuaW1wb3J0IGNkayA9IHJlcXVpcmUoJ0Bhd3MtY2RrL2NvcmUnKTtcbmltcG9ydCB7VnBjU3RhY2t9IGZyb20gXCIuLi8uLi9DREtfVlBDL2xpYi9jZGtfdnBjLXN0YWNrXCI7XG5pbXBvcnQge1MzU3RhY2t9IGZyb20gXCIuLi9saWIvczMtc3RhY2tcIjtcblxuY29uc3QgYXBwID0gbmV3IGNkay5BcHAoKTtcbmNvbnN0IHZwY1N0YWNrICA9IG5ldyBWcGNTdGFjayhhcHAsICdWcGNTdGFjaycpO1xubmV3IFMzU3RhY2soYXBwLCAnUzNTdGFjaycsIHt2cGM6IHZwY1N0YWNrLnZwY30pO1xuYXBwLnN5bnRoKCk7Il19

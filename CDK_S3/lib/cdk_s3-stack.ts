@@ -1,15 +1,22 @@
-import * as cdk from '@aws-cdk/core';
-// import * as sqs from '@aws-cdk/aws-sqs';
+import {App, Stack, StackProps} from "@aws-cdk/core";
+import {Vpc} from '@aws-cdk/aws-ec2';
+import {BlockPublicAccess, Bucket} from '@aws-cdk/aws-s3';
 
-export class S3Stack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
-    super(scope, id, props);
+interface S3StackProps extends StackProps {
+    vpc: Vpc;
+}
 
-    // The code that defines your stack goes here
+export class S3Stack extends Stack {
+    readonly sampleBucket: Bucket;
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'CdkS3Queue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
-  }
+    constructor(scope: App, id: string, props?: S3StackProps) {
+        super(scope, id, props);
+
+        //Place you resource definitions here:
+        this.sampleBucket = new Bucket(this, 'sampleBucket', {
+            versioned: false,
+            bucketName: 'bucket-created-using-cdk',
+            publicReadAccess: false,
+        });
+    }
 }

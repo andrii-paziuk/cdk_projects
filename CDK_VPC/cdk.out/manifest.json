@@ -1,0 +1,294 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkVpcStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkVpcStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdkVpcStack/CustomVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVPC616E3387",
+            "trace": [
+              "new Vpc (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1311:21)",
+              "new CdkVpcStack (/home/test/PycharmProjects/cdk_projects/CDK_VPC/lib/cdk_vpc-stack.ts:13:20)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/bin/cdk_vpc.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CustomVPC/isolatedSubnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVPCisolatedSubnetSubnet1Subnet5EE040CC",
+            "trace": [
+              "new Subnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1667:20)",
+              "new PrivateSubnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1944:5)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1519:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1478:28)",
+              "Vpc.createSubnets (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1467:12)",
+              "new Vpc (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1345:10)",
+              "new CdkVpcStack (/home/test/PycharmProjects/cdk_projects/CDK_VPC/lib/cdk_vpc-stack.ts:13:20)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/bin/cdk_vpc.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CustomVPC/isolatedSubnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVPCisolatedSubnetSubnet1RouteTableE344101B",
+            "trace": [
+              "new Subnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1685:19)",
+              "new PrivateSubnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1944:5)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1519:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1478:28)",
+              "Vpc.createSubnets (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1467:12)",
+              "new Vpc (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1345:10)",
+              "new CdkVpcStack (/home/test/PycharmProjects/cdk_projects/CDK_VPC/lib/cdk_vpc-stack.ts:13:20)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/bin/cdk_vpc.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CustomVPC/isolatedSubnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVPCisolatedSubnetSubnet1RouteTableAssociationD92D06C0",
+            "trace": [
+              "new Subnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1691:5)",
+              "new PrivateSubnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1944:5)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1519:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1478:28)",
+              "Vpc.createSubnets (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1467:12)",
+              "new Vpc (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1345:10)",
+              "new CdkVpcStack (/home/test/PycharmProjects/cdk_projects/CDK_VPC/lib/cdk_vpc-stack.ts:13:20)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/bin/cdk_vpc.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CustomVPC/isolatedSubnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVPCisolatedSubnetSubnet2SubnetC08A7A26",
+            "trace": [
+              "new Subnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1667:20)",
+              "new PrivateSubnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1944:5)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1519:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1478:28)",
+              "Vpc.createSubnets (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1467:12)",
+              "new Vpc (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1345:10)",
+              "new CdkVpcStack (/home/test/PycharmProjects/cdk_projects/CDK_VPC/lib/cdk_vpc-stack.ts:13:20)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/bin/cdk_vpc.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CustomVPC/isolatedSubnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVPCisolatedSubnetSubnet2RouteTable1A2EDF0E",
+            "trace": [
+              "new Subnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1685:19)",
+              "new PrivateSubnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1944:5)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1519:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1478:28)",
+              "Vpc.createSubnets (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1467:12)",
+              "new Vpc (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1345:10)",
+              "new CdkVpcStack (/home/test/PycharmProjects/cdk_projects/CDK_VPC/lib/cdk_vpc-stack.ts:13:20)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/bin/cdk_vpc.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CustomVPC/isolatedSubnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVPCisolatedSubnetSubnet2RouteTableAssociationF23BC24D",
+            "trace": [
+              "new Subnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1691:5)",
+              "new PrivateSubnet (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1944:5)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1519:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1478:28)",
+              "Vpc.createSubnets (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1467:12)",
+              "new Vpc (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1345:10)",
+              "new CdkVpcStack (/home/test/PycharmProjects/cdk_projects/CDK_VPC/lib/cdk_vpc-stack.ts:13:20)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/bin/cdk_vpc.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (node:events:640:26)",
+              "process.emit (node:events:520:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit.sharedData.processEmitHook.installedValue [as emit] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@cspotcode/source-map-support/source-map-support.js:745:40)"
+            ]
+          }
+        ],
+        "/CdkVpcStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (node:events:640:26)",
+              "process.emit (node:events:520:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit.sharedData.processEmitHook.installedValue [as emit] (/home/test/PycharmProjects/cdk_projects/CDK_VPC/node_modules/@cspotcode/source-map-support/source-map-support.js:745:40)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdkVpcStack"
+    }
+  }
+}

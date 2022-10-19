@@ -1,6 +1,3 @@
-import * as sns from '@aws-cdk/aws-sns';
-import * as subs from '@aws-cdk/aws-sns-subscriptions';
-import * as sqs from '@aws-cdk/aws-sqs';
 import * as cdk from '@aws-cdk/core';
 import ec2 = require('@aws-cdk/aws-ec2');
 import * as rds from '@aws-cdk/aws-rds';
@@ -9,16 +6,7 @@ export class RdsStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const queue = new sqs.Queue(this, 'CdkRdsQueue', {
-      visibilityTimeout: cdk.Duration.seconds(300)
-    });
-
-    const topic = new sns.Topic(this, 'CdkRdsTopic');
-
-    topic.addSubscription(new subs.SqsSubscription(queue));
-    topic.addSubscription(new subs.SqsSubscription(queue));
-
-    const vpc = new ec2.Vpc(this, 'my-cdk-vpc', {
+    const vpc = new ec2.Vpc(this, 'rds-cdk', {
       cidr: '10.0.0.0/16',
       natGateways: 0,
       maxAzs: 3,
@@ -37,7 +25,7 @@ export class RdsStack extends cdk.Stack {
     });
 
     // 👇 create a security group for the EC2 instance
-    const ec2InstanceSG = new ec2.SecurityGroup(this, 'ec2-instance-sg', {
+    const ec2InstanceSG = new ec2.SecurityGroup(this, 'ec2-secgroup-rds', {
       vpc,
     });
 
@@ -48,7 +36,7 @@ export class RdsStack extends cdk.Stack {
     );
 
     // 👇 create the EC2 instance
-    const ec2Instance = new ec2.Instance(this, 'ec2-instance', {
+    const ec2Instance = new ec2.Instance(this, 'ec2-rds', {
       vpc,
       vpcSubnets: {
         subnetType: ec2.SubnetType.PUBLIC,
@@ -65,13 +53,13 @@ export class RdsStack extends cdk.Stack {
     });
 
     // Creating RDS
-    const dbInstance = new rds.DatabaseInstance(this, 'db-instance', {
+    const dbInstance = new rds.DatabaseInstance(this, 'db-instance-cdk', {
       vpc,
       vpcSubnets: {
         subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
       },
       engine: rds.DatabaseInstanceEngine.postgres({
-        version: rds.PostgresEngineVersion.VER_13_1,
+        version: rds.PostgresEngineVersion.VER_13_6,
       }),
       instanceType: ec2.InstanceType.of(
         ec2.InstanceClass.BURSTABLE3,

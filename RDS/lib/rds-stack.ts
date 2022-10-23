@@ -1,6 +1,7 @@
 import * as cdk from '@aws-cdk/core';
 import ec2 = require('@aws-cdk/aws-ec2');
 import * as rds from '@aws-cdk/aws-rds';
+import * as kms from '@aws-cdk/aws-kms';
 
 export class RdsStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
@@ -52,6 +53,14 @@ export class RdsStack extends cdk.Stack {
       keyName: 'ec2-key-pair',
     });
 
+    // Creating kms
+    const key = new kms.Key(this, 'my-kms-key', {
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      alias: 'alias/mykey',
+      description: 'KMS key for encryption',
+      enableKeyRotation: false,
+    });
+
     // Creating RDS
     const dbInstance = new rds.DatabaseInstance(this, 'db-instance-cdk', {
       vpc,
@@ -65,6 +74,8 @@ export class RdsStack extends cdk.Stack {
         ec2.InstanceClass.BURSTABLE3,
         ec2.InstanceSize.MICRO,
       ),
+      storageEncrypted: true,
+      storageEncryptionKey: key,
       credentials: rds.Credentials.fromGeneratedSecret('postgres'),
       multiAz: false,
       allocatedStorage: 100,
@@ -78,5 +89,8 @@ export class RdsStack extends cdk.Stack {
       publiclyAccessible: false,
     });
 
+    new cdk.CfnOutput(this, 'key-arn', {
+      value: key.keyArn,
+    });
   }
 }
